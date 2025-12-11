@@ -124,15 +124,34 @@ print(response.json())
 
 #### Using Postman:
 
-1. Method: POST
-2. URL: `http://localhost:8000/nevie/test`
-3. Headers: `Content-Type: application/json`
-4. Body (raw JSON):
-   ```json
-   {
-     "message": "Hello"
-   }
-   ```
+**Test Procedure**:
+
+1. Open Postman and create a new request
+2. Set Method to: **POST**
+3. Enter URL: `http://localhost:8000/nevie/test`
+4. Go to **Headers** tab and add:
+   - Key: `Content-Type`
+   - Value: `application/json`
+5. Go to **Body** tab:
+   - Select **raw**
+   - Choose **JSON** from dropdown
+   - Enter the request body:
+     ```json
+     {
+       "message": "Hello"
+     }
+     ```
+6. Click **Send**
+7. Verify the response:
+   - Status: `200 OK`
+   - Response body should contain:
+     ```json
+     {
+       "status": "ok",
+       "summary": "...",
+       "timestamp": "..."
+     }
+     ```
 
 ### n8n Webhook (Complete Workflow):
 
@@ -157,15 +176,36 @@ print(response.json())
 
 #### Using Postman:
 
-1. Method: POST
-2. URL: `https://n8n.srv1042375.hstgr.cloud/webhook-test/nevie/test`
-3. Headers: `Content-Type: application/json`
-4. Body (raw JSON):
-   ```json
-   {
-     "message": "Hello"
-   }
-   ```
+**Test Procedure**:
+
+1. Open Postman and create a new request
+2. Set Method to: **POST**
+3. Enter URL: `https://n8n.srv1042375.hstgr.cloud/webhook-test/nevie/test`
+4. Go to **Headers** tab and add:
+   - Key: `Content-Type`
+   - Value: `application/json`
+5. Go to **Body** tab:
+   - Select **raw**
+   - Choose **JSON** from dropdown
+   - Enter the request body:
+     ```json
+     {
+       "message": "Hello"
+     }
+     ```
+6. Click **Send**
+7. Verify the response:
+   - Status: `200 OK`
+   - Response body should contain:
+     ```json
+     {
+       "workflow": "ok",
+       "summary": "...",
+       "recommendation": "..."
+     }
+     ```
+
+**Screenshot available**: See `docs/screenshots/postman_test_screenshot.png` for a visual example.
 
 **Expected n8n Response:**
 
