@@ -158,7 +158,7 @@ print(response.json())
 #### Using curl:
 
 ```bash
-curl -X POST "https://n8n.srv1042375.hstgr.cloud/webhook-test/nevie/test" \
+curl -X POST "https://n8n.srv1042375.hstgr.cloud/webhook/nevie/test" \
   -H "Content-Type: application/json" \
   -d '{"message": "Hello"}'
 ```
@@ -168,7 +168,7 @@ curl -X POST "https://n8n.srv1042375.hstgr.cloud/webhook-test/nevie/test" \
 ```python
 import requests
 
-url = "https://n8n.srv1042375.hstgr.cloud/webhook-test/nevie/test"
+url = "https://n8n.srv1042375.hstgr.cloud/webhook/nevie/test"
 payload = {"message": "Hello"}
 response = requests.post(url, json=payload)
 print(response.json())
@@ -180,7 +180,7 @@ print(response.json())
 
 1. Open Postman and create a new request
 2. Set Method to: **POST**
-3. Enter URL: `https://n8n.srv1042375.hstgr.cloud/webhook-test/nevie/test`
+3. Enter URL: `https://n8n.srv1042375.hstgr.cloud/webhook/nevie/test`
 4. Go to **Headers** tab and add:
    - Key: `Content-Type`
    - Value: `application/json`
