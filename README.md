@@ -204,7 +204,10 @@ nevie-test1/
 ├── .gitignore                # Git ignore file
 ├── README.md                  # This file
 ├── docs/                      # Documentation folder
-│   └── NGROK_SETUP.md        # ngrok setup instructions
+│   ├── NGROK_SETUP.md        # ngrok setup instructions
+│   └── screenshots/           # Screenshots
+│       ├── n8n_workflow_screenshot.png    # n8n workflow screenshot
+│       └── postman_test_screenshot.png    # Postman test screenshot
 ├── example_request.sh         # Example curl request (n8n webhook)
 ├── example_request.json       # Example JSON payload
 ├── example_request_direct.sh  # Example curl request (direct API - for debugging)

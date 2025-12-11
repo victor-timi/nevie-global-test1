@@ -33,6 +33,9 @@ async def nevie_test(request: MessageRequest):
         # Call OpenAI to summarize
         summary = get_summary_from_openai(request.message)
         
+        # Replace double quotes with single quotes to avoid JSON issues
+        summary = summary.replace('"', "'")
+        
         # Generate timestamp
         timestamp = datetime.utcnow().isoformat() + "Z"
         
