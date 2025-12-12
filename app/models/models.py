@@ -15,4 +15,19 @@ class MessageResponse(BaseModel):
     status: str
     summary: str
     timestamp: str
+    cached: bool = Field(default=False, description="Whether the response was served from cache")
+
+
+class ErrorResponse(BaseModel):
+    """Error response model"""
+    status: str = "error"
+    message: str
+    timestamp: str
+
+
+class StatsResponse(BaseModel):
+    """Stats response model"""
+    total_requests: int
+    cache_hits: int
+    cache_miss: int
 

@@ -12,9 +12,14 @@ ENV/
 # Environment variables
 .env
 
+# Temporary files
+temp/
+
 # Logs
 *.log
 nevie_api.log
+normal.log
+error.log
 
 # IDE
 .vscode/

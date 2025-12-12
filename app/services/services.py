@@ -4,7 +4,7 @@ Business logic services for OpenAI and recommendations
 
 import logging
 from openai import OpenAI
-from app.config import (
+from app.core.config import (
     OPENAI_API_KEY,
     OPENAI_MODEL,
     OPENAI_MAX_TOKENS,
